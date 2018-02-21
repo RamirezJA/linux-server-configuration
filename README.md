@@ -12,6 +12,9 @@ Locate the SSH key you created for the grader user.
 During the submission process, paste the contents of the grader user's SSH key into the "Notes to Reviewer" field
 
 # Server Details
+IP address: http://54.200.114.43/
+SSH PORT: 2200
+URL: http://ec2-54-200-114-43.us-west-2.compute.amazonaws.com
 
 # Configuration changes
 
