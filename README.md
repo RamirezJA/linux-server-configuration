@@ -191,7 +191,7 @@ Deactivate with deactivate
 # Virtual Host
 create a file in /etc/apache2/sites-available/ called icapp.conf
 Add below:
-'''
+"""
 <VirtualHost *:80>
   ServerName 54.200.114.43
   ServerAdmin dredhge@gmail.com
@@ -212,7 +212,7 @@ Add below:
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 
-'''
+"""
 run sudo a2ensite ic
 
 Next run sudo service apache2 reload
@@ -221,7 +221,7 @@ Next run sudo service apache2 reload
 In /var/www/ic run sudo nano icapp.wsgi
 
 Then add:
-'''
+"""
 activate_this = '/var/www/ic/icapp/venv/bin/activate_this.py'
 execfile(activate_this, dict(__file__=activate_this))
 
@@ -234,7 +234,7 @@ sys.path.insert(0,"/var/www/ic/")
 from icapp import app as application
 application.secret_key = 'super_secret_key'
 
-'''
+"""
 next run sudo service apache2 restart
 
 next change ownership by running sudo chown -R www-data:www-data ic/
